@@ -1,2 +1,8 @@
 # SpartaXamarinAppProject
 I decided to create an app for my phone whilst studying at Sparta. This is the finished phone app with code.
+
+Since I'm quite an avid climber and unfortunately Samsung Health does not have a climbing "activity", i decided to create an app that would allow me to record all my climbing sessions. I made this app over the weekend from Friday 13th - Sunday 15th December using Visual Studio with Android development. It was a lot of fun getting to grips with XAML code and using Xamarin Forms and SQLite to create a simple database app that would store my climbs and sessions directly to the phone.
+
+The first page has all the function to save the climbs and apps, as well as referencing the stopwatch on the second page to show you your climb time, without having to switch back and forth between the pages. The second page is just a simple stopwatch so if you dont want to add data you can still use the app to log how long your session was. The third page is where all the data is shown. There are two ListViews on the page, one showing the completed sessions, and the other showing completed climbs. You can also select a specific session and based on the date of that session, you can see all the climbs from that date, meaning if you do two sessions in a day, you will see both sets of climbs from each session in the list.
+
+Creating this app has given me a lot of knowledge in using XAML and also creating apps for mobile phones. I also hope to be able to create a SmartWatch app that can link to this for added functionality and ease, so everything can be done on the watch, rather than having to come back to your phone after each climb.
