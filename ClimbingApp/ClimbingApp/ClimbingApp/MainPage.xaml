@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ClimbingApp"
+             mc:Ignorable="d"
+             x:Class="ClimbingApp.MainPage"
+             BackgroundColor="#363F40"
+             UnselectedTabColor="#C3E4E6" 
+             SelectedTabColor="#5EF7FF"
+             BarTextColor="#C3E4E6" 
+             BarBackgroundColor="#557D80">
+    <local:Page1></local:Page1>
+    <local:Page2></local:Page2>
+    <local:Page3></local:Page3>
+</TabbedPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ClimbingApp"
+             mc:Ignorable="d"
+             x:Class="ClimbingApp.Page1"
+             Title="Session"
+             IconImageSource="baseline_accessibility_new_black_18dp.png">
+    <ContentPage.Content>
+        <Grid Margin="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Entry x:Name="ClimbsSessionEntry" Keyboard="Numeric" Placeholder="0" Grid.Row="0" Grid.Column="3" FontSize="20" TextColor="#C3E4E6" PlaceholderColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+            <Label Text="Climbs this session:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" TextColor="#C3E4E6" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+            <Label x:Name="SessionTimer" Text="00:00:00" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" FontSize="24" TextColor="#C3E4E6" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+            <Entry x:Name="ClimbAreaEntry" Placeholder="Area in Centre" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" FontSize="20" TextColor="#C3E4E6" PlaceholderColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+            <Label Text="Climb Area:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" TextColor="#C3E4E6" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+            <Entry x:Name="ClimbGradeEntry" Placeholder="VB-V1" Grid.Row="2" Grid.Column="3" FontSize="20" TextColor="#C3E4E6" PlaceholderColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+            <Label Text="Climb Grade:" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" TextColor="#C3E4E6" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+            <Button x:Name="AddGradeButton" Grid.Row="2" Grid.Column="5" Text="+" FontSize="20" Clicked="AddGradeButton_Clicked" TextColor="#C3E4E6" BackgroundColor="#2F7B80"/>
+            <Button x:Name="SubtractGradeButton" Grid.Row="2" Grid.Column="4" Text="-" FontSize="20" Clicked="SubtractGradeButton_Clicked" TextColor="#C3E4E6" BackgroundColor="#2F7B80"/>
+            <Entry x:Name="ClimbAttemptsEntry" Keyboard="Numeric" Placeholder="0" Grid.Row="3" Grid.Column="3" FontSize="20" TextColor="#C3E4E6" PlaceholderColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+            <Label Text="Attempts at this climb:" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" TextColor="#C3E4E6" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+            <Button x:Name="AddAttemptButton" Grid.Row="3" Grid.Column="5" Text="+" FontSize="20" Clicked="AddAttempt_Clicked" TextColor="#C3E4E6" BackgroundColor="#2F7B80"/>
+            <Button x:Name="SubtractAttemptButton" Grid.Row="3" Grid.Column="4" Text="-" FontSize="20" Clicked="SubtractAttempt_Clicked" TextColor="#C3E4E6" BackgroundColor="#2F7B80"/>
+            <Button x:Name="NextClimbButton" Grid.Row="4" Grid.ColumnSpan="6" Text="Next Climb" TextColor="#C3E4E6" BackgroundColor="#2F7B80" Clicked="NextClimbButton_Clicked"/>
+            <Button x:Name="FinishSessionButton" Grid.Row="5" Grid.ColumnSpan="6" Text="Finish Session" TextColor="#C3E4E6" BackgroundColor="#2F7B80" Clicked="FinishSessionButton_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

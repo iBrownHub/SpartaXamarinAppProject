@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ClimbingApp"
+             mc:Ignorable="d"
+             x:Class="ClimbingApp.Page3"
+             Title="Completed Sessions"
+             IconImageSource="baseline_calendar_today_black_18dp.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="SessionsListView" SeparatorColor="#C3E4E6" ItemSelected="SessionsListView_ItemSelected">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Date of Session" TextColor="#C3E4E6"/>
+                        <Label Grid.Column="1" Text="Climbs in Session" TextColor="#C3E4E6"/>
+                        <Label Grid.Column="2" Text="Climb Time" TextColor="#C3E4E6"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding SessionID}" TextColor="#C3E4E6"/>
+                                <Label Grid.Column="1" Text="{Binding AmountOfClimbs}" TextColor="#C3E4E6"/>
+                                <Label Grid.Column="2" Text="{Binding ClimbTime}" TextColor="#C3E4E6"/>
+                            </Grid>
+                        </ViewCell> 
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="ClimbsListView" SeparatorColor="#C3E4E6">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Date Of Session" TextColor="#C3E4E6"/>
+                        <Label Grid.Column="1" Text="Area In The Centre" TextColor="#C3E4E6"/>
+                        <Label Grid.Column="2" Text="Climb Grade" TextColor="#C3E4E6"/>
+                        <Label Grid.Column="3" Text="Climb Attempts" TextColor="#C3E4E6"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding SessionID}" TextColor="#C3E4E6"/>
+                                <Label Grid.Column="1" Text="{Binding AreaInCentre}" TextColor="#C3E4E6"/>
+                                <Label Grid.Column="2" Text="{Binding ClimbGrade}" TextColor="#C3E4E6"/>
+                                <Label Grid.Column="3" Text="{Binding ClimbAttempts}" TextColor="#C3E4E6"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
