@@ -17,10 +17,12 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Date of Session" TextColor="#C3E4E6"/>
-                        <Label Grid.Column="1" Text="Climbs in Session" TextColor="#C3E4E6"/>
-                        <Label Grid.Column="2" Text="Climb Time" TextColor="#C3E4E6"/>
+                        <Label Grid.Column="0" Text="Date of Session" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="1" Text="Centre Name" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="2" Text="Climbs in Session" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="3" Text="Climb Time" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                     </Grid>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -31,15 +33,18 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
+                                    <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Text="{Binding SessionID}" TextColor="#C3E4E6"/>
-                                <Label Grid.Column="1" Text="{Binding AmountOfClimbs}" TextColor="#C3E4E6"/>
-                                <Label Grid.Column="2" Text="{Binding ClimbTime}" TextColor="#C3E4E6"/>
+                                <Label Grid.Column="0" Text="{Binding SessionID}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="1" Text="{Binding CentreName}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="2" Text="{Binding AmountOfClimbs}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="3" Text="{Binding ClimbTime}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                             </Grid>
                         </ViewCell> 
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button x:Name="DeleteButton" Text="Delete" IsEnabled="False" HorizontalOptions="Fill" Clicked="DeleteButton_Clicked" TextColor="#C3E4E6" BackgroundColor="#2F7B80"/>
             <ListView x:Name="ClimbsListView" SeparatorColor="#C3E4E6">
                 <ListView.Header>
                     <Grid>
@@ -48,11 +53,13 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Date Of Session" TextColor="#C3E4E6"/>
-                        <Label Grid.Column="1" Text="Area In The Centre" TextColor="#C3E4E6"/>
-                        <Label Grid.Column="2" Text="Climb Grade" TextColor="#C3E4E6"/>
-                        <Label Grid.Column="3" Text="Climb Attempts" TextColor="#C3E4E6"/>
+                        <Label Grid.Column="0" Text="Date Of Session" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="1" Text="Centre Name" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="2" Text="Area In The Centre" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="3" Text="Climb Grade" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="4" Text="Climb Attempts" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                     </Grid>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -64,11 +71,13 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
+                                    <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Text="{Binding SessionID}" TextColor="#C3E4E6"/>
-                                <Label Grid.Column="1" Text="{Binding AreaInCentre}" TextColor="#C3E4E6"/>
-                                <Label Grid.Column="2" Text="{Binding ClimbGrade}" TextColor="#C3E4E6"/>
-                                <Label Grid.Column="3" Text="{Binding ClimbAttempts}" TextColor="#C3E4E6"/>
+                                <Label Grid.Column="0" Text="{Binding SessionID}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="1" Text="{Binding CentreName}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="2" Text="{Binding AreaInCentre}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="3" Text="{Binding ClimbGrade}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="4" Text="{Binding ClimbAttempts}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

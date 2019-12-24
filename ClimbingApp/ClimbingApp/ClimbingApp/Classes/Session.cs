@@ -5,12 +5,11 @@ using SQLite;
 
 namespace ClimbingApp.Classes
 {
-    class Session
+    public class Session
     {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
-        [NotNull]
+        [PrimaryKey, NotNull]
         public DateTime SessionID { get; set; }
+        public string CentreName { get; set; }
         public int AmountOfClimbs { get; set; }
         public string ClimbTime { get; set; }
     }

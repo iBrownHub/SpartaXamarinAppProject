@@ -17,8 +17,8 @@
             <ProgressBar  x:Name="progressBar" VerticalOptions="Start" ProgressColor="#ABFBFF">
 
             </ProgressBar>
-            <Button x:Name="StartButton" Text="Start" Clicked="StartButton_Clicked" BackgroundColor="#2F7B80" TextColor="#C3E4E6" Margin="10,0,10,10"/>
-            <Button x:Name="ResetButton" Text="Reset"  IsEnabled="False" Clicked="ResetButton_Clicked" BackgroundColor="#2F7B80" TextColor="#C3E4E6" Margin="10,0,10,20"/>
+            <Button x:Name="StartButton" Text="Start" Clicked="StartButton_Clicked" BackgroundColor="#2F7B80" TextColor="#C3E4E6"/>
+            <Button x:Name="ResetButton" Text="Reset"  IsEnabled="False" Clicked="ResetButton_Clicked" BackgroundColor="#2F7B80" TextColor="#C3E4E6" Margin="0,0,0,10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

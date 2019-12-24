@@ -6,6 +6,16 @@
              mc:Ignorable="d"
              x:Class="ClimbingApp.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Montserrat-Bold.ttf#Montserrat-Bold"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -21,7 +21,7 @@ namespace ClimbingApp
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            using(SQLiteConnection conn = new SQLiteConnection(App.filePath))
+            using (SQLiteConnection conn = new SQLiteConnection(App.filePath))
             {
                 conn.CreateTable<Session>();
                 var sessions = conn.Table<Session>().ToList();
@@ -35,9 +35,27 @@ namespace ClimbingApp
         private void SessionsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var session = (Session)SessionsListView.SelectedItem;
+            DeleteButton.IsEnabled = true;
             using (SQLiteConnection conn = new SQLiteConnection(App.filePath))
             {
                 var climbs = conn.Query<Climb>($"Select * from Climb where SessionID = ?", session.SessionID);
+                ClimbsListView.ItemsSource = climbs;
+            }
+        }
+
+        private void DeleteButton_Clicked(object sender, EventArgs e)
+        {
+            DeleteButton.IsEnabled = false;
+            var session = (Session)SessionsListView.SelectedItem;
+            using (SQLiteConnection conn = new SQLiteConnection(App.filePath))
+            {
+                conn.Query<Climb>($"Delete from Climb where SessionID = ?", session.SessionID);
+                conn.Query<Session>($"Delete from Session where SessionID = ?", session.SessionID);
+                conn.CreateTable<Session>();
+                var sessions = conn.Table<Session>().ToList();
+                SessionsListView.ItemsSource = sessions;
+                conn.CreateTable<Climb>();
+                var climbs = conn.Table<Climb>().ToList();
                 ClimbsListView.ItemsSource = climbs;
             }
         }
