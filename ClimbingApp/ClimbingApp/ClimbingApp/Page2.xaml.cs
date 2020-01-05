@@ -49,16 +49,5 @@ namespace ClimbingApp
             s.Reset();
             ResetButton.IsEnabled = false;
         }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            if (started && Page1.stopped)
-            {
-                Page1.stopped = false;
-                Page2.started = false;
-                StartButton.Text = "Start";
-                ResetButton.IsEnabled = true;
-            }
-        }
     }
 }

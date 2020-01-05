@@ -18,7 +18,6 @@ namespace ClimbingApp
         int iGrade = -1;
         int jGrade = 1;
         int iClimbs = 0;
-        bool opened = false;
         public Page1()
         {
             InitializeComponent();
@@ -126,7 +125,7 @@ namespace ClimbingApp
                 SessionID = DateTime.Today.Date,
                 CentreName = CentreEntry.Text,
                 AmountOfClimbs = Convert.ToInt32(ClimbsSessionEntry.Text),
-                ClimbTime = SessionTimer.Text
+                ClimbTime = (EndSessionTime.Time - StartSessionTime.Time).ToString()
             };
             using (SQLiteConnection conn = new SQLiteConnection(App.filePath))
             {
@@ -169,23 +168,10 @@ namespace ClimbingApp
             ClimbGradeEntry.Text = $"VB - V{jGrade.ToString()}";
             CentreEntry.Text = null;
             ClimbAreaEntry.Text = null;
+            StartSessionTime.Time = new TimeSpan(0);
+            EndSessionTime.Time = new TimeSpan(0);
             Page2.s.Stop();
             stopped = true;
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            if (!opened)
-            {
-                Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
-                {
-                    TimeSpan ts = Page2.s.Elapsed;
-                    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
-                    SessionTimer.Text = elapsedTime;
-                    return true;
-                });
-            }
         }
     }
 }

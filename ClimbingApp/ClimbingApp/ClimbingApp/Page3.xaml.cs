@@ -59,5 +59,18 @@ namespace ClimbingApp
                 ClimbsListView.ItemsSource = climbs;
             }
         }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.filePath))
+            {
+                conn.CreateTable<Session>();
+                var sessions = conn.Query<Session>($"Select * from Session where CentreName like '{SessionSearchBar.Text}%'").ToList();
+                SessionsListView.ItemsSource = sessions;
+                conn.CreateTable<Climb>();
+                var climbs = conn.Query<Climb>($"Select * from Climb where CentreName like '{SessionSearchBar.Text}%'").ToList();
+                ClimbsListView.ItemsSource = climbs;
+            }
+        }
     }
 }

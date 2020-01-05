@@ -11,7 +11,7 @@
              SelectedTabColor="#5EF7FF"
              BarTextColor="#C3E4E6" 
              BarBackgroundColor="#557D80">
+    <local:Page3></local:Page3>
     <local:Page1></local:Page1>
     <local:Page2></local:Page2>
-    <local:Page3></local:Page3>
 </TabbedPage>

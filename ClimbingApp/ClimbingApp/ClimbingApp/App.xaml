@@ -13,6 +13,12 @@
             <Style TargetType="Entry">
                 <Setter Property="FontFamily" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
             </Style>
+            <Style TargetType="TimePicker">
+                <Setter Property="FontFamily" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+            </Style>
+            <Style TargetType="SearchBar">
+                <Setter Property="FontFamily" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+            </Style>
             <Style TargetType="Button">
                 <Setter Property="FontFamily" Value="Montserrat-Bold.ttf#Montserrat-Bold"/>
             </Style>

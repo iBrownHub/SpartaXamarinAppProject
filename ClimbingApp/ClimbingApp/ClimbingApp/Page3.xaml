@@ -6,10 +6,11 @@
              xmlns:local="clr-namespace:ClimbingApp"
              mc:Ignorable="d"
              x:Class="ClimbingApp.Page3"
-             Title="Completed Sessions"
+             Title="Sessions"
              IconImageSource="baseline_calendar_today_black_18dp.png">
     <ContentPage.Content>
         <StackLayout>
+            <SearchBar x:Name="SessionSearchBar" Placeholder="Search via Centre..." PlaceholderColor="#C3E4E6" TextColor="#C3E4E6" TextChanged="SearchBar_TextChanged"/>
             <ListView x:Name="SessionsListView" SeparatorColor="#C3E4E6" ItemSelected="SessionsListView_ItemSelected">
                 <ListView.Header>
                     <Grid>
@@ -40,7 +41,7 @@
                                 <Label Grid.Column="2" Text="{Binding AmountOfClimbs}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                                 <Label Grid.Column="3" Text="{Binding ClimbTime}" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                             </Grid>
-                        </ViewCell> 
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
@@ -57,7 +58,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Text="Date Of Session" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                         <Label Grid.Column="1" Text="Centre Name" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
-                        <Label Grid.Column="2" Text="Area In The Centre" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="2" Text="Centre Area" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                         <Label Grid.Column="3" Text="Climb Grade" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                         <Label Grid.Column="4" Text="Climb Attempts" TextColor="#C3E4E6" HorizontalTextAlignment="Center"/>
                     </Grid>
